@@ -1,0 +1,45 @@
+﻿@model IEnumerable<otce_project_final.Models.Category> 
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="">Category List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-primary"><i class="fas fa-plus fa-sm"></i>&nbsp; Add New</a>
+        </div>
+    </div>
+
+    @if(Model != null && Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var cat in Model)
+                {
+                    <tr>
+                        <td class="w-75">@cat.Name</td>
+                        <td class="w-25 text-right">
+                            <a asp-controller="Category" asp-route-Id="@cat.Id" asp-action="Edit" class="btn btn-success">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <a asp-controller="Category" asp-route-Id="@cat.Id" asp-action="Delete" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No categories exist.</p>
+    }
+</div>
+

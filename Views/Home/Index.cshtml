@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="SVLXPJ5x"></script>
+<div class="container">
+    <header class="bg-header-otce py-0 mb-3 text-center">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-lg-12">
+              <h1 class="display-5 text-white mt-5 mb-2"><span class="font-weight-bold">Olde Towne</span> <span class="font-italic">Espresso &amp; Coffee</span></h1>
+              <p class="lead mb-5 text-white-50"></p>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="row mb-4">
+        <div class="col-3">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="bg-light">Phone</th>
+                    <td colspan="2">361-226-1468</td>
+                </tr>
+                <tr>
+                    <th class="bg-light" rowspan="7">Hours</th>
+                    <td>
+                        <strong>MON-FRI</strong><br />
+                        8:00am - 4:00pm<br />
+                        <hr />
+                        <strong>SATURDAY</strong><br />
+                        8:00am - 2:00pm<br />
+                        <hr />
+                        <strong>SUNDAY</strong><br />
+                        CLOSED<br />
+                    </td>
+                </tr>
+            </table>
+            <a class="btn btn-lg bg-header-otce w-100" href="https://www.facebook.com/OTEspresso" target="_blank">
+                FACEBOOK&nbsp;&nbsp; <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+        <div class="col-9">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="@GlobalConstants.CImagePath\c1.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="@GlobalConstants.CImagePath\c2.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="@GlobalConstants.CImagePath\c3.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="@GlobalConstants.CImagePath\c4.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="@GlobalConstants.CImagePath\c5.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr />
+        <div class="col-6">
+            <div class="otce-fb-feed">
+                <div class="fb-page" data-href="https://www.facebook.com/OTEspresso" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/OTEspresso" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/OTEspresso">Olde Towne Espresso and Cafe</a></blockquote></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="otce-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225852.6116423706!2d-97.4268807790119!3d27.81140047978805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8668525d42f4fd9b%3A0xf6e21ef8e11b52ae!2s331%20S%20Commercial%20St%2C%20Aransas%20Pass%2C%20TX%2078336!5e0!3m2!1sen!2sus!4v1619222841151!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

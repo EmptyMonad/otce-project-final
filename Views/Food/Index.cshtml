@@ -1,0 +1,46 @@
+﻿@model otce_project_final.Models.ViewModels.HomeVM 
+
+<div class="container">
+    <div class="text-center">
+        <button class="p-2 px-3 active-filter main-filter btn btn-danger" data-filter="all">All</button>
+        <!-- category filter -->
+        @foreach (var cat in Model.Categories)
+        {
+            <button class="p-2 px-3 main-filter btn btn-outline-secondary" data-filter="@cat.Name.Replace(' ','-')">@cat.Name</button>
+        }
+    </div>
+    <hr />
+    <div class="row">
+        @foreach(var product in Model.Products)
+        {
+            <partial name="_ProductListItem" model="product" />
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".main-filter").click(function () {
+                var el = document.getElementsByClassName("active-filter")[0];
+                el.classList.remove("btn-danger");
+                el.classList.add("btn-outline-secondary");
+                el.classList.remove("active-filter");
+
+                this.classList.remove("btn-outline-secondary");
+                this.classList.add("btn-danger");
+                this.classList.add("active-filter");
+                var value = $(this).attr('data-filter');
+                if (value == "all") {
+                    $('.filter').show('1000');
+                }
+                else {
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+
+                }
+            });
+
+        });
+    </script>
+} 

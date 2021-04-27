@@ -1,0 +1,18 @@
+﻿@model otce_project_final.Models.Product
+
+<!-- Bootstrap Card-->
+<div class="col-4 mb-4 filter @Model.Category.Name.Replace(' ','-')">
+    <div class="card h-100">
+        <div class="img-magnifier-container">
+            <img src="@GlobalConstants.ImagePath@Model.Image" width="340" height="300" class="card-img-top img-zoom"/>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title mb-0">@Model.Name</h4>
+            <p class="text-secondary font-italic">@Model.Category.Name</p>
+            <p class="card-text card-fixed-height">@Model.Description</p>
+            <h3>
+                <span class="badge bg-primary text-white w-100 p-2">$@Model.Price</span>
+            </h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+﻿.card-fixed-height {
+    height: 110px !important;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    line-height: .9em;
+    font-size: 1.1em;
+}
+
+.navbar-brand small {
+    font-size: 70%;
+    font-style: italic;
+}
+
+.bg-otce {
+    font-size: 100%;
+    background-color: #2a2a2a;
+    padding: 12px 14px;
+}
+
+.card img {
+    height: 300px !important;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+#logout {
+    border: none !important;
+}
+
+#logout:hover {
+    color: #e0d2bc!important;
+}
+
+.bg-header-otce {
+    background-color: #6f4e37;
+    color: #fff;
+}
+
+.bg-header-otce:hover {
+    color: #e0d2bc;
+}
+
+body > .container {
+    margin-bottom: 65px;
+}
+
+.nav-link {
+    padding-left: 1rem;
+    padding-right:1rem;
+}
+
+/*zoom function for images*/
+.img-magnifier-container {
+    position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor:none;
+  width: 250px;
+  height: 150px;
+  opacity:0;
+  pointer-events:none;
+}
+
+.img-magnifier-container:hover .img-magnifier-glass {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.otce-fb-feed, .otce-map {
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    background-color: #f8f5f0;
+}
+    
